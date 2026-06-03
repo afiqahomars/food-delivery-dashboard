@@ -47,7 +47,7 @@ if not filtered_df.empty:
         y='tip_amount', 
         markers=True,
         labels={'order_day_of_week': 'Order Day of Week', 'tip_amount': 'Total Tip Amount ($)'},
-        template='whitegrid'
+        template='plotly_white'
     )
     # Customize line color and width to match your royalblue style
     fig1.update_traces(line=dict(color='royalblue', width=2.5))
@@ -82,7 +82,7 @@ with col1:
             x='prep_time_bin',
             y='cancel_count',
             labels={'prep_time_bin': 'Preparation Time Bin', 'cancel_count': 'Number of Cancellations'},
-            template='whitegrid'
+            template='plotly_white'
         )
         # Style with your preferred coral color scheme
         fig2.update_traces(marker_color='coral', marker_line_color='black', marker_line_width=1, opacity=0.85)
@@ -114,7 +114,7 @@ with col2:
             },
             opacity=0.8,
             color_discrete_sequence=px.colors.qualitative.Set1,  # Uses the 'Set1' palette rules
-            template='whitegrid'
+            template='plotly_white'
         )
         
         st.plotly_chart(fig3, use_container_width=True)
